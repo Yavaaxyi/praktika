@@ -1,0 +1,11 @@
+.razmer {
+    width: 175px;
+    height: 40px;
+    border-radius: 67px;
+}
+
+button{
+    font-size: 22px;
+    height:100%;
+    white-space: nowrap;
+}
