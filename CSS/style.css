@@ -19,13 +19,20 @@ button{
 }
 
 .rasstoyaniefooter {
-    margin: 231px;
+    position: relative;
+    margin: 275px;
 }
 
 .container {
     /* background-color: #D9D9D9; */
+    padding: 20px 25px;
 }
 
 .rigthfooter {
     text-align: right;
 }
+
+.rasstoyaniebulok {
+    margin-left: 650px;
+}
+
