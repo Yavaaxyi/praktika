@@ -1,0 +1,31 @@
+/* обязательные стили */
+
+.hvr__images {
+    position: relative;
+  }
+  
+  .hvr__sectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+  }
+  
+  .hvr__sector {
+    flex-grow: 1;
+  }
+  
+  /* не обязательные стили */
+
+  
+
+  
+  .image {
+    width: 284px;
+    height: 246px;
+  }
+  
+  
+  
