@@ -1,3 +1,6 @@
+header { background-color: #9bb9b7;
+}
+
 .razmer {
     width: 175px;
     height: 40px;
@@ -24,7 +27,7 @@ button{
 }
 
 .container {
-    /* background-color: #D9D9D9; */
+    /* background-color: #98FB98; */
     padding: 20px 25px;
 }
 

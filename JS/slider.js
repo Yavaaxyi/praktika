@@ -62,3 +62,4 @@ class HvrSlider {
   }
   
   new HvrSlider('.images');
+  
