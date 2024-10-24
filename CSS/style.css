@@ -1,6 +1,6 @@
-header { 
+/* header { 
     background: linear-gradient(60deg, rgb(209, 226, 232) 0%, rgba(155, 185, 183,1) 100%);
-}
+} */
 
 body {
     background: linear-gradient(60deg, rgb(209, 226, 232) 0%, rgba(155, 185, 183,1) 100%);
@@ -12,6 +12,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
+
 
 .razmer {
     width: 175px;
@@ -58,4 +59,9 @@ button{
 
 .zasada2 {
     margin-left: 241px;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
 }

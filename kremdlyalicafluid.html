@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/products.css">
+    <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
     <!-- шапка -->
@@ -56,36 +57,40 @@
        </div>
     </header>
 
-      <main>
-        <div class="containerproducts">
-          <div class="grid product">
-            <div class="column-xs-12 column-md-7">
-              <div class="product-gallery">
-                <div class="product-image">
-                  <img class="active" src="images/productcardsphoto/Крем_для_лица_флюид_«Береза_и_шалфей».webp">
-                </div>
-                <ul class="image-list">
-                  <li class="image-item"><img src="images/productcardsphoto/Крем-флюид_«Берёза_и_шалфей»_2.webp"></li>
-                  <li class="image-item"><img src="images/productcardsphoto/Крем-флюид_«Берёза_и_шалфей»_3.webp"></li>
-                  <li class="image-item"><img src="images/productcardsphoto/Крем-флюид_«Берёза_и_шалфей»_4.webp"></li>
-                </ul>
-              </div>
-            </div>
-            <div class="column-xs-12 column-md-5">
-              <h1>Крем для лица флюид «Береза и шалфей»</h1>
-              <h2>790 ₽</h2>
-              <div class="description">
-                <p>Лёгкий дневной крем — это идеальное решение для мягкого ухода, вдохновлённое самой природой. Крем обогащён витамином Е, который питает и насыщает кожу, а гидролат берёзы успокаивает раздражения и повышает упругость. Эффективная формула крема нежно ухаживает за кожей лица, придавая ей естественный безупречный вид.</p>
-                <p>Теперь еще более невесомая текстура! Средство моментально впитывается, не оставляя разводов и жирного блеска, матирует (технология soft-skin) и не ощущается на лице после нанесения. Подходит для проблемной и комбинированной кожи, можно использовать как базу под макияж.</p>
 
+
+      <div class="wrapper">
+        <div class="product-img">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/productcardsphoto/Крем_для_лица_флюид_«Береза_и_шалфей».webp" height="620" width="527" class="d-block" alt="...">
               </div>
-              <button class="add-to-cart">Купить</button>
+              <div class="carousel-item">
+                <img src="images/productcardsphoto/Крем-флюид_«Берёза_и_шалфей»_2.webp" height="620" width="527" class="d-block" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/productcardsphoto/Крем-флюид_«Берёза_и_шалфей»_3.webp" height="620" width="527" class="d-block" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/productcardsphoto/Крем-флюид_«Берёза_и_шалфей»_4.webp" height="620" width="527" class="d-block" alt="...">
+              </div>
             </div>
           </div>
         </div>
-      </main>
-
-
+        <div class="product-info">
+          <div class="product-text">
+            <h1>Крем для лица флюид</h1>
+            <h2>«Береза и шалфей»</h2>
+            <p>Лёгкий дневной крем — это идеальное решение для мягкого ухода, вдохновлённое самой природой. Крем обогащён витамином Е, который питает и насыщает кожу, а гидролат берёзы успокаивает раздражения и повышает упругость. Эффективная формула крема нежно ухаживает за кожей лица, придавая ей естественный безупречный вид.</p>
+            <p>Теперь еще более невесомая текстура! Средство моментально впитывается, не оставляя разводов и жирного блеска, матирует (технология soft-skin) и не ощущается на лице после нанесения. Подходит для проблемной и комбинированной кожи, можно использовать как базу под макияж.</p>
+          </div>
+          <div class="product-price-btn">
+            <p><span>790</span>₽</p>
+            <button type="button">Купить</button>
+          </div>
+        </div>
+      </div>
 
     <!-- футер -->
          <footer class="py-3 mb-4 border-top">
