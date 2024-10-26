@@ -69,3 +69,37 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+img.rotate-img {
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+            transition:         transform .8s ease-in-out;
+  }
+  img.rotate-img:hover {
+    -webkit-transform: rotate(360deg); /* Градусы поворота можно изменить по необходимости */
+            transform: rotate(360deg); /* Градусы поворота можно изменить по необходимости */
+  }
+
+  
+
+
+.text-ex-tooltip {
+    position: relative;
+  }
+  .text-ex-tooltip .tooltip-content {
+    display: none;
+    position: absolute;
+    /* background-color: #fff; Фон подсказки */
+    padding: 0rem 1.4rem; /* Отступы от края */
+    right: auto; /* Позиция подсказки */
+    text-align: center;
+    font-size: 1rem;
+    color: #a8d7e0; /* Цвет текста */
+  }
+  .text-ex-tooltip:hover .tooltip-content {
+    display: block;
+  }
+       
+  
+  
