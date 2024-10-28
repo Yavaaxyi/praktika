@@ -92,7 +92,7 @@ img.rotate-img {
     position: absolute;
     /* background-color: #fff; Фон подсказки */
     padding: 0rem 1.4rem; /* Отступы от края */
-    right: auto; /* Позиция подсказки */
+    right: 100px; /* Позиция подсказки */
     text-align: center;
     font-size: 1rem;
     color: #a8d7e0; /* Цвет текста */
@@ -100,6 +100,6 @@ img.rotate-img {
   .text-ex-tooltip:hover .tooltip-content {
     display: block;
   }
-       
+
   
   
