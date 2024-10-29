@@ -27,7 +27,81 @@
           <span class="fs-4"><img src="images/productcardsphoto/em.png" width="90"></span>
         </a>
         <ul class="nav" style="margin-left: auto;">
-          <li class="nav-item"><a href="registration.html" class="nav-link link-body-emphasis px-2"><img src="images/User_alt.png" alt="" width="30" height="30"></a></li>
+          <li class="nav-item nav-link "><img src="images/User_alt.png" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="" width="30" height="30">
+
+<!-- Modal -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Регистрация</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="name" class="form-label">Имя пользователя</label>
+            <input type="text" class="form-control" id="name" value="" required>
+            <div class="valid-feedback">
+              Четко
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" value="" required>
+            <div class="valid-feedback">
+              Четко
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="telephone" class="form-label">Телефон</label>
+            <div class="input-group has-validation">
+              <input type="tel" class="form-control" id="telephone" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                suck it
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">
+              не соответствует требованиям
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="confirmpassword" class="form-label">Подтвердить пароль</label>
+            <input type="password" class="form-control" id="confirmpassword" required>
+  
+            <div class="invalid-feedback">
+              пароль не совпадает
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Разрешаю обработку персональных данных
+              </label>
+              <div class="invalid-feedback">
+                нажмите галочку Разрешаю обработку персональных данных
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </li>
           <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><img src="images/love.png" alt="" width="27" height="27"></a></li>
           <li class="nav-item"><a href="korzina.html" class="nav-link link-body-emphasis px-2"><img src="images/Basket_alt_3_fill.png" width="30" height="30"></a></li>
         </ul>
@@ -90,16 +164,16 @@
           <ul class="flex cards">
             <li>
               <h2>Тональная основа минеральная</h2>
-              <img src="images/productcardsphoto/Тон_основа_01.webp" width="300px" height="300px">
+              <a href="tonalnayaosnova.html"><img src="images/productcardsphoto/Тон_основа_01.webp" width="300px" height="300px"></a>
             </li>
             <li><h2>Тональная основа с кистью</h2>
-              <img src="images/productcardsphoto/Тональная_основа_с_кистью.webp" width="300px" height="300px">
+              <a href="mineralnayatonalnayaosnova.html"><img src="images/productcardsphoto/Тональная_основа_с_кистью.webp" width="300px" height="300px"></a>
             </li>
             <li><h2>Тушь для ресниц укпрепление и объем</h2>
-              <img src="images/productcardsphoto/Тушь_для_ресниц_УКРЕПЛЕНИЕ_И_ОБЪЁМ.webp" width="300px" height="300px">
+              <a href="tushdlyaresnic.html"><img src="images/productcardsphoto/Тушь_для_ресниц_УКРЕПЛЕНИЕ_И_ОБЪЁМ.webp" width="300px" height="300px"></a>
             </li>
             <li><h2>Мининабор косметики</h2>
-              <img src="images/productcardsphoto/Мининабор_декоративной_косметики.webp" width="300px" height="300px">
+              <a href="mininaborkosmetiki.html"><img src="images/productcardsphoto/Мининабор_декоративной_косметики.webp" width="300px" height="300px"></a>
             </li>
             
           </ul>
@@ -112,16 +186,16 @@
           <ul class="flex cards">
             <li>
               <h2>СЕТ «Восстановление и упругость»</h2>
-              <img src="images/productcardsphoto/СЕТ_NEW_«Восстановление_и_упругость».webp" width="300px" height="300px">
+              <a href="setvosstanovlenie.html"><img src="images/productcardsphoto/СЕТ_NEW_«Восстановление_и_упругость».webp" width="300px" height="300px"></a>
             </li>
             <li><h2>BB-крем минеральный</h2>
-              <img src="images/productcardsphoto/01_ВВ_крем.webp" width="300px" height="300px">
+              <a href="bbcrem.html"><img src="images/productcardsphoto/01_ВВ_крем.webp" width="300px" height="300px"></a>
             </li>
             <li><h2>Воск для бровей питательный</h2>
-              <img src="images/productcardsphoto/Воск_для_бровей.webp" width="300px" height="300px">
+              <a href="vosk.html"><img src="images/productcardsphoto/Воск_для_бровей.webp" width="300px" height="300px"></a>
             </li>
             <li><h2>Оттеночный бальзам для губ 2в1</h2>
-              <img src="images/productcardsphoto/Бальзам_Вишневый_аметист.webp" width="300px" height="300px">
+              <a href="ottenichniybalzam.html"><img src="images/productcardsphoto/Бальзам_Вишневый_аметист.webp" width="300px" height="300px"></a>
             </li>
             
           </ul>
@@ -134,9 +208,6 @@
           <!-- <div class="footer"> -->
             <!--Content before waves-->
             <div class="inner-header flex">
-              <div class="container text-center">
-
-                </div>
               </div>
               
               <!--Waves Container-->
