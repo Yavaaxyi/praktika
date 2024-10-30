@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "Пудра злаковая для умывания",
+        "price": "690",
+        "img": "img/productcardsphoto/Пудра_злаковая.webp"
+    },
+    {
+        "id": "2",
+        "name": "Крем для лица увлажняющий",
+        "price": "890",
+        "img": "img/cars/camera_nikon.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Крем для лица флюид",
+        "price": "790",
+        "img": "img/cars/ipad.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Крем для лица лифтинг",
+        "price": "990",
+        "img": "img/cars/phone_galaxy.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Ледяной гуаша",
+        "price": "690",
+        "img": "img/cars/tv_supra.jpg"
+    }
+]

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/korzina.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+  </head>
+  <body>
+    
+    <!-- шапка -->
+    <header>
+      <div class="container d-flex flex-wrap justify-content-center">        
+        <form class=" col-lg-auto mb-4 mb-lg-3" style="margin-top: auto; margin-right: auto;"  role="search">
+          <input type="search" class="form-control" placeholder="Поиск по товарам" aria-label="Search">
+        </form>
+        <a href="index.html" class=" d-flex align-items-center link-body-emphasis text-decoration-none" style="margin: auto;">
+          <span class="fs-4"><img src="images/productcardsphoto/em.png" width="90"></span>
+        </a>
+        <ul class="nav" style="margin-left: auto;">
+          <li class="nav-item"><a href="registration.html" class="nav-link link-body-emphasis px-2"><img src="images/User_alt.png" alt="" width="30" height="30"></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><img src="images/love.png" alt="" width="30" height="30"></a></li>
+          <li class="nav-item"><a href="korzina.html" class="nav-link link-body-emphasis px-2"><img src="images/Basket_alt_3_fill.png" width="30" height="30"></a></li>
+        </ul>
+
+      </div>
+    </header>
+    <nav class="bg-body-tertiary border-bottom">
+      <div class="container d-flex flex-wrap">
+        <ul class="nav me-auto" style="margin: auto;">
+          <li class="nav-item"><a href="index.html" class="nav-link link-body-emphasis px-4"><p>ГЛАВНАЯ</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>НОВИНКИ</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>МАКИЯЖ</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>ЛИЦО</p></a></li>
+          <li class="nav-item"><a href="tovari.html" class="nav-link link-body-emphasis px-4"><p>ПРОДУКЦИЯ</p></a></li>
+          <li class="nav-item"><a href="About_company.html" class="nav-link link-body-emphasis px-4"><p>О НАС</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>ДОСТАВКА И ОПЛАТА</p></a></li>
+          <li class="nav-item"><a href="contacts.html" class="nav-link link-body-emphasis px-4"><p>КОНТАКТЫ</p></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="nav nav-pills">
+      <li><a href="/">Каталог</a></li>
+      <li class="active"><a href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a></li>
+      <li><a href="order.html">Оформление заказа</a></li>
+  </ul>
+  <br />
+  <div class="table-responsive">
+      <table class="table table-hover table-bordered">
+          <thead>
+              <tr>
+                  <th>Артикул</th>
+                  <th>Название</th>
+                  <th>Цена</th>
+                  <th>Количество</th>
+                  <th>Сумма</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody id="cart">
+              <tr><td colspan="6"><img src="img/loading.gif" alt="" /></td></tr>
+          </tbody>
+      </table>
+  </div>
+  <div>Итого: <span id="total-cart-summa">65000</span> руб.</div>
+  <br />
+  <a class="btn btn-info" href="order.html">Оформить заказ</a>
+</div>
+
+<script id="cart-template" type="text/template">
+  <% _.each(goods, function(good) { %>
+      <tr class="cart-item js-cart-item" data-id="<%= good.id %>">
+          <td><%= good.id %></td>
+          <td><%- good.name %></td>
+          <td><%= good.price %> руб.</td>
+          <td>
+              <span 
+                  class="cart-item__btn-dec-count js-change-count" 
+                  title="Уменьшить на 1" 
+                  data-id="<%= good.id %>" 
+                  data-delta="-1"
+              >
+                  <span class="glyphicon glyphicon-minus"></span>
+              </span>
+              <span class="js-count"><%= good.count %></span>
+              <span 
+                  class="cart-item__btn-inc-count js-change-count" 
+                  title="Увеличить на 1" 
+                  data-id="<%= good.id %>" 
+                  data-delta="1"
+              >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </span>
+          </td>
+          <td><span class="js-summa"><%= good.count * good.price %></span> руб.</td>
+          <td>
+              <span class="cart-item__btn-remove js-remove-from-cart" title="Удалить из корзины" data-id="<%= good.id %>">
+                  <span class="glyphicon glyphicon-remove"></span>                                
+              </span>
+          </td>
+      </tr>
+  <% }); %>
+</script>
+    
+
+        <!-- футер -->
+        <footer class="border-top">
+          <!-- <div class="footer"> -->
+            <!--Content before waves-->
+            <div class="inner-header flex">
+              </div>
+              
+              <!--Waves Container-->
+              <div>
+                  <div class="row text-center">
+                    <div class="col">
+                      <div class="text-ex-tooltip">
+                        <a href="#" target="_blank"><img class='footerimg rotate-img' src="images/telephone-fill.png" width="30" height="30">
+                        <div class="tooltip-content">
+                          <p>89110534491</p>
+                        </div> </a>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="text-ex-tooltip">
+                        <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="images/vk-social-network-logo.png" width="30" height="30" alt=""> 
+                        <div class="tooltip-content">
+                          <p>https://vk.com/bright.whitesmith</p>
+                        </div> </a>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="text-ex-tooltip">
+                      <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="images/telegram.png" width="30" height="30" alt="" >
+                      <div class="tooltip-content">
+                        <p>telegram</p>
+                      </div></a>
+                    </div>
+                  </div>
+                
+                  <!-- <div class="col">
+                    <ul class="nav">
+                      <li class="nav-item mb-2"><a href="#" target="_blank"><img class='footerimg' src="images/telephone-fill.png" width="30" height="30"></a></li>
+                      <li class="nav-item mb-2"><a href="#" target="_blank"><img class='footerimg' src="images/vk-social-network-logo.png" width="30" height="30" alt=""></a></li>
+                      <li class="nav-item mb-2"><a href="#" target="_blank"><img class='footerimg' src="images/telegram.png" width="30" height="30" alt="" ></a></li>
+                    </ul>
+                  </div> -->
+
+
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+              </svg>
+            </div>
+            <!--Waves end-->
+            
+          </div>
+          <!--Header ends-->
+          
+          <!--Content starts-->
+          <div class="content flex">
+                    <ul class="nav">
+                      <li class="nav-item mb-2 col-5"><a href="About_company.html" target='_blank'class="nav-link p-0 text-body-secondary">О компании</a></li>
+                      <li class="nav-item mb-2 col-5"><a href="tovari.html" target='_blank'class="nav-link p-0 text-body-secondary">Продукция</a></li>
+                      <li class="nav-item mb-2 col-2"><a href="contacts.html" target='_blank'class="nav-link p-0 text-body-secondary">Контакты</a></li>
+                    </ul>
+
+          </div>
+          <!--Content ends-->
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
