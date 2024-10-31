@@ -19,9 +19,4 @@ COLLATE utf8_general_ci;
 -- Вывод данных для таблицы brands
 --
 INSERT INTO brands VALUES
-(1, 'Apple'),
-(2, 'Samsung'),
-(3, 'Acer'),
-(4, 'Lenovo'),
-(5, 'Asus'),
-(6, 'Gigabyte');
+(1, 'EcoMake')
