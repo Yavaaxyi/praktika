@@ -43,84 +43,67 @@
           <li class="nav-item"><a href="contacts.html" class="nav-link link-body-emphasis px-4"><p>КОНТАКТЫ</p></a></li>
         </ul>
       </div>
-    </nav>
-    <script id="catalog-template" type="text/template">
-      
-        <div class="wrapper">
-          <div class="product-img">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/productcardsphoto/Пудра_злаковая.webp" height="620" width="527" class="d-block" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/productcardsphoto/злаковая_пудра_2.webp" height="620" width="527" class="d-block" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/productcardsphoto/злаковая_пудра_3.webp" height="620" width="527" class="d-block" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/productcardsphoto/злаковая_пудра_4.webp" height="620" width="527" class="d-block" alt="...">
-              </div>
-            </div>
-          </div>
-        </div>
-        <% _.each(goods, function(good) { %>
-        <div class="product-info">
-          <div class="product-text">          
-            <li class="good-item">
-            <!-- <div class="col-md-8"> -->
-                <div class="good-item__name"><h1><%- good.name %></h1></div>
-                <h3></h3>
-                <div class="good-item_text"><p><%- good.text %></p></div>
-                
-          <div class="product-price-btn">
-            <div class="good-item__price"><p><span><%= good.price %></span>₽</p>  </div>          
-            <button type='button' 
-            class="good-item__btn-add btn btn-info btn-sm js-add-to-cart"
-            data-id="<%= good.id %>"
-            data-name="<%- good.name %>"
-            data-price="<%= good.price %>"
-        >Добавить в корзину</button>
-          </div>
-
-            <!-- <button type="button">Купить</button> -->
-
-          </div>
-        <!-- </div> -->
-      </div>
-      <% }); %>
-    </script>
-    <!-- <ul class="nav nav-pills">
-        <li class="active"><a href="/">Каталог</a></li>
-        <li><a href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a></li>
-        <li><a href="order.html">Оформление заказа</a></li>
-    </ul> -->
+    </nav>    
+    
     <ul id="goods" class="list-unstyled">
       <img src="images/loading.gif" alt="" />
     </ul>
 
     <script id="catalog-template" type="text/template">
+      
+      <div class="wrapper">
+        <div class="product-img">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/productcardsphoto/Пудра_злаковая.webp" height="620" width="527" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/productcardsphoto/злаковая_пудра_2.webp" height="620" width="527" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/productcardsphoto/злаковая_пудра_3.webp" height="620" width="527" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/productcardsphoto/злаковая_пудра_4.webp" height="620" width="527" class="d-block" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
       <% _.each(goods, function(good) { %>
-          <li class="good-item row">
-              <div class="col-md-4">
-                  <img class="good-item__img" src="<%- good.img %>" width = 200 height = 200 />
-              </div>
-              <div class="col-md-8">                  
-                  <div class="good-item__id"><%= good.id %></div>
-                  <div class="good-item__name"><%- good.name %></div>
-                  <div class="good-item__price"><%= good.price %> руб.</div>
+      <div class="product-info">
+        <div class="product-text">          
+          <li class="good-item">
+          <!-- <div class="col-md-8"> -->
+              <div class="good-item__name"><h1><%= good.name %></h1></div>
+              <h3></h3>
+              <div class="good-item_text"><p><%- good.text %></p></div>
+              
+        <div class="product-price-btn">
+          <div class="good-item__price"><p><span><%= good.price %></span>₽</p>  </div>          
+          <button type='button' 
+          class="good-item__btn-add btn btn-info btn-sm js-add-to-cart"
+          data-id="<%= good.id %>"
+          data-name="<%- good.name %>"
+          data-price="<%= good.price %>"
+      >Добавить в корзину</button>
+        </div>
 
-                  <button 
-                      class="good-item__btn-add btn btn-info btn-sm js-add-to-cart"
-                      data-id="<%= good.id %>"
-                      data-name="<%- good.name %>"
-                      data-price="<%= good.price %>"
-                  >Добавить в корзину</button>
-              </div>
-          </li>
-      <% }); %>
+          <!-- <button type="button">Купить</button> -->
+
+        </div>
+      <!-- </div> -->
+    </div>
+    <% }); %>
   </script>
+    
+    <!-- <ul class="nav nav-pills">
+        <li class="active"><a href="/">Каталог</a></li>
+        <li><a href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a></li>
+        <li><a href="order.html">Оформление заказа</a></li>
+    </ul> -->
+
+
         <!-- футер -->
         <footer class="border-top">
           <!-- <div class="footer"> -->
