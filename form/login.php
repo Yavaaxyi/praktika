@@ -1,10 +1,33 @@
+<?php
+require_once('../db.php');
+
+$login = $_POST['login'];
+$pass = $_POST['pass'];
+
+if(empty($login) || empty($pass))
+{
+    echo "Заполните все поля";
+} else {
+    $sql = "SELECT * FROM `users` WHERE login = '$login' AND pass = '$pass'";
+    $result = $conn -> query($sql);
+
+    if ($result->num_rows > 0)
+    {
+        while($row = $result->fetch_assoc()){
+            echo "Добро пожаловать " . $row['login'];
+        }
+    } else {
+        echo "нет такого пользователя";
+    }
+}
+?>
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Корзина</title>
+    <title>Личный кабинет -> данные</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
@@ -43,25 +66,21 @@
       </div>
     </nav>
 
+    <!-- кнопки перехода  страницы -->
+      <div class="container text-center">
+        <h1>Личный кабинет</h1>
+        <a href="personal_account_zakazi.html"><button class="btn btn-outline-secondary">Мои заказы</button></a>
+        <a href="personal_account_dannie.html"><button class="btn btn-outline-secondary rasstoyaniebulok">Мои данные</button></a>
+      </div>
+      <!-- блок с данными -->
+      <h1 class="text-center">Данные</h1>
       <div class="container border">
-        <!-- форма авторизации -->
-      <form>
-        <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Эл. почта</label>
-          <div class="col-sm-3">
-            <input type="email" class="form-control" id="inputEmail3">
-          </div>
-        </div>
-        <div class="row mb-3">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль</label>
-          <div class="col-sm-3">
-            <input type="password" class="form-control" id="inputPassword3">
-          </div>
-        </div>
-        <a href="personal_account_dannie.html"><button type="button" class="btn btn-primary razmer">Войти</button><br>
-        <a class="btn" target="_blank" href="Password_reset.html">Забыли пароль?</a>
-        <a class="btn" target="_blank" href="registration.html">Нет аккаунта? Зарегистрируйтесь</a>
-      </form>
+        <h3>Фамилия: Иванов</h3>
+        <h3>Имя: Иван</h3>
+        <h3>Отчество: Иванович</h3>
+        <h3>Дата рождения: 14/04/2006</h3>
+        <h3>E-mail: reidguitry@test.ru</h3>
+        <h3>Номер телефона: +7(234)-033-67-91</h3>
       </div>
 
         <!-- футер -->
@@ -137,6 +156,7 @@
           </div>
           <!--Content ends-->
         </footer>
+    <p class="col-md-4 mb-0 text-body-secondary" style="margin-left: 920px;">&copy; 2024 Company, Inc</p>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+require_once('db.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,59 +30,50 @@
           <span class="fs-4"><img src="images/productcardsphoto/em.png" width="90"></span>
         </a>
         <ul class="nav" style="margin-left: auto;">
-          <li class="nav-item nav-link "><img src="images/User_alt.png" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="" width="30" height="30">
+          <li class="nav-item nav-link "><img src="images/User_alt.png" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" alt="" width="30" height="30" style="cursor: pointer;">
 
 <!-- Modal -->
 <!-- Button trigger modal -->
 
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="color: black">
-  <div class="modal-dialog">
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header" style="background: linear-gradient(60deg, rgb(209, 226, 232) 0%, rgb(209, 226, 232) 100%);">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Регистрация</h1>
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Регистрация</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form class="row g-3 needs-validation" novalidate>
+      <form action="form/register1.php" class="row g-3 needs-validation" novalidate method="post">
           <div class="col-md-4">
             <label for="name" class="form-label">Имя пользователя</label>
-            <input type="text" class="form-control" id="name" required>
-            <div class="valid-feedback">
+            <input type="text" class="form-control" id="name" name="login" required>
+            <!-- <div class="valid-feedback">
               Четко
-            </div>
+            </div> -->
           </div>
           <div class="col-md-4">
             <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" required>
-            <div class="valid-feedback">
+            <input type="email" class="form-control" id="email" name="email" required>
+            <!-- <div class="valid-feedback">
               Четко
-            </div>
-          </div>
-          <div class="col-md-4">
-            <label for="telephone" class="form-label">Телефон</label>
-            <div class="input-group has-validation">
-              <input type="tel" class="form-control" id="telephone" aria-describedby="inputGroupPrepend" required>
-              <div class="invalid-feedback">
-                suck it
-              </div>
-            </div>
+            </div> -->
           </div>
           <div class="col-md-6">
             <label for="password" class="form-label">Пароль</label>
-            <input type="password" class="form-control" id="password" required>
-            <div class="invalid-feedback">
+            <input type="password" class="form-control" id="password" name="pass" required>
+            <!-- <div class="invalid-feedback">
               не соответствует требованиям
-            </div>
+            </div> -->
           </div>
           <div class="col-md-6">
             <label for="confirmpassword" class="form-label">Подтвердить пароль</label>
-            <input type="password" class="form-control" id="confirmpassword" required>
+            <input type="password" class="form-control" id="confirmpassword" name="repeatpass" required>
   
-            <div class="invalid-feedback">
+            <!-- <div class="invalid-feedback">
               пароль не совпадает
-            </div>
+            </div> -->
           </div>
           <div class="col-12">
             <div class="form-check">
@@ -87,9 +81,9 @@
               <label class="form-check-label" for="invalidCheck">
                 Разрешаю обработку персональных данных
               </label>
-              <div class="invalid-feedback">
+              <!-- <div class="invalid-feedback">
                 нажмите галочку Разрешаю обработку персональных данных
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-12">
@@ -97,12 +91,47 @@
           </div>
         </form>
       </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Авторизация</button>
+      </div>
     </div>
   </div>
 </div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Авторизация</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+              <form action="form/login.php" class="row g-3 needs-validation" novalidate method="post">
+          <div class="col-md-4">
+            <label for="name" class="form-label">Имя пользователя</label>
+            <input type="text" class="form-control" id="name" name="login" required>
+          </div>
+          <div class="col-md-6">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="password" name="pass" required>
+          </div>
+          <div class="col-md-6">
+          </div>
+          <div class="col-12">
+            <button class="btn" type="submit"><p>Войти</p></button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Регистрация</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <button class="btn btn-primary" >Open first modal</button> -->
+
 
           </li>
-          <li class="nav-item"><a href="cart.html" class="nav-link link-body-emphasis px-2"><img src="images/Basket_alt_3_fill.png" width="30" height="30"></a></li>
+          <li class="nav-item"><a href="cart.html" class="nav-link link-body-emphasis px-2"><img src="images/Basket_alt_3_fill.png" width="30" height="30" style="cursor: pointer;"></a></li>
         </ul>
 
       </div>
