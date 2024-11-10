@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6f0045ab4dbd46190e6d607cb497819afc8a06bb
+
+
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
 <!doctype html>
 <html lang="en">
   <head>
@@ -152,8 +161,17 @@
       <h1 class="text-center">Данные</h1>
       <div class="container">
       <?php
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
+<?php
+>>>>>>> 102525ad014d2d7873da63a4d917a141147aa69b
+>>>>>>> 6f0045ab4dbd46190e6d607cb497819afc8a06bb
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
 require_once('../db.php');
 
 $login = $_POST['login'];
@@ -169,20 +187,107 @@ if(empty($login) || empty($pass))
     if ($result->num_rows > 0)
     {
         while($row = $result->fetch_assoc()){
+<<<<<<< HEAD
             echo '<h3>'."Добро пожаловать: " . $row['login'] .'</h3>'.'<br>';
             echo '<h3>'. "E-mail: " . $row['email'] .'</h3>';
+=======
+<<<<<<< HEAD
+            echo '<h3>'."Добро пожаловать: " . $row['login'] .'</h3>'.'<br>';
+            echo '<h3>'. "E-mail: " . $row['email'] .'</h3>';
+=======
+<<<<<<< HEAD
+            echo '<h3>'."Добро пожаловать: " . $row['login'] .'</h3>'.'<br>';
+            echo '<h3>'. "E-mail: " . $row['email'] .'</h3>';
+=======
+            echo "Добро пожаловать " . $row['login'];
+>>>>>>> 102525ad014d2d7873da63a4d917a141147aa69b
+>>>>>>> 6f0045ab4dbd46190e6d607cb497819afc8a06bb
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
         }
     } else {
         echo "нет такого пользователя";
     }
 }
 ?>
+<<<<<<< HEAD
 
       </div>
       </div>
 
 
 
+=======
+<<<<<<< HEAD
+      </div>
+=======
+<<<<<<< HEAD
+      </div>
+=======
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Личный кабинет -> данные</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+  </head>
+  <body>
+    
+    <!-- шапка -->
+    <header>
+      <div class="container d-flex flex-wrap justify-content-center">        
+        <form class=" col-lg-auto mb-4 mb-lg-3" style="margin-top: auto; margin-right: auto;"  role="search">
+          <input type="search" class="form-control" placeholder="Поиск по товарам" aria-label="Search">
+        </form>
+        <a href="index.html" class=" d-flex align-items-center link-body-emphasis text-decoration-none" style="margin: auto;">
+          <span class="fs-4"><img src="images/productcardsphoto/em.png" width="90"></span>
+        </a>
+        <ul class="nav" style="margin-left: auto;">
+          <li class="nav-item"><a href="registration.html" class="nav-link link-body-emphasis px-2"><img src="images/User_alt.png" alt="" width="30" height="30"></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><img src="images/love.png" alt="" width="30" height="30"></a></li>
+          <li class="nav-item"><a href="korzina.html" class="nav-link link-body-emphasis px-2"><img src="images/Basket_alt_3_fill.png" width="30" height="30"></a></li>
+        </ul>
+
+      </div>
+    </header>
+    <nav class="bg-body-tertiary border-bottom">
+      <div class="container d-flex flex-wrap">
+        <ul class="nav me-auto" style="margin: auto;">
+          <li class="nav-item"><a href="index.html" class="nav-link link-body-emphasis px-4"><p>ГЛАВНАЯ</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>НОВИНКИ</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>МАКИЯЖ</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>ЛИЦО</p></a></li>
+          <li class="nav-item"><a href="tovari.html" class="nav-link link-body-emphasis px-4"><p>ПРОДУКЦИЯ</p></a></li>
+          <li class="nav-item"><a href="About_company.html" class="nav-link link-body-emphasis px-4"><p>О НАС</p></a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>ДОСТАВКА И ОПЛАТА</p></a></li>
+          <li class="nav-item"><a href="contacts.html" class="nav-link link-body-emphasis px-4"><p>КОНТАКТЫ</p></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- кнопки перехода  страницы -->
+      <div class="container text-center">
+        <h1>Личный кабинет</h1>
+        <a href="personal_account_zakazi.html"><button class="btn btn-outline-secondary">Мои заказы</button></a>
+        <a href="personal_account_dannie.html"><button class="btn btn-outline-secondary rasstoyaniebulok">Мои данные</button></a>
+      </div>
+      <!-- блок с данными -->
+      <h1 class="text-center">Данные</h1>
+      <div class="container border">
+        <h3>Фамилия: Иванов</h3>
+        <h3>Имя: Иван</h3>
+        <h3>Отчество: Иванович</h3>
+        <h3>Дата рождения: 14/04/2006</h3>
+        <h3>E-mail: reidguitry@test.ru</h3>
+        <h3>Номер телефона: +7(234)-033-67-91</h3>
+      </div>
+
+>>>>>>> 102525ad014d2d7873da63a4d917a141147aa69b
+>>>>>>> 6f0045ab4dbd46190e6d607cb497819afc8a06bb
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
         <!-- футер -->
         <footer class="border-top">
           <!-- <div class="footer"> -->
@@ -195,9 +300,21 @@ if(empty($login) || empty($pass))
                   <div class="row text-center">
                     <div class="col">
                       <div class="text-ex-tooltip">
+<<<<<<< HEAD
 
                         <a href="#" target="_blank"><img class='footerimg rotate-img' src="../images/telephone-fill.png" width="30" height="30">
 
+=======
+<<<<<<< HEAD
+                        <a href="#" target="_blank"><img class='footerimg rotate-img' src="../images/telephone-fill.png" width="30" height="30">
+=======
+<<<<<<< HEAD
+                        <a href="#" target="_blank"><img class='footerimg rotate-img' src="../images/telephone-fill.png" width="30" height="30">
+=======
+                        <a href="#" target="_blank"><img class='footerimg rotate-img' src="images/telephone-fill.png" width="30" height="30">
+>>>>>>> 102525ad014d2d7873da63a4d917a141147aa69b
+>>>>>>> 6f0045ab4dbd46190e6d607cb497819afc8a06bb
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
                         <div class="tooltip-content">
                           <p>89110534491</p>
                         </div> </a>
@@ -205,7 +322,19 @@ if(empty($login) || empty($pass))
                     </div>
                     <div class="col">
                       <div class="text-ex-tooltip">
+<<<<<<< HEAD
                         <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="../images/vk-social-network-logo.png" width="30" height="30" alt="">  
+=======
+<<<<<<< HEAD
+                        <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="../images/vk-social-network-logo.png" width="30" height="30" alt=""> 
+=======
+<<<<<<< HEAD
+                        <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="../images/vk-social-network-logo.png" width="30" height="30" alt=""> 
+=======
+                        <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="images/vk-social-network-logo.png" width="30" height="30" alt=""> 
+>>>>>>> 102525ad014d2d7873da63a4d917a141147aa69b
+>>>>>>> 6f0045ab4dbd46190e6d607cb497819afc8a06bb
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
                         <div class="tooltip-content">
                           <p>https://vk.com/bright.whitesmith</p>
                         </div> </a>
@@ -213,8 +342,20 @@ if(empty($login) || empty($pass))
                     </div>
                     <div class="col">
                       <div class="text-ex-tooltip">
+<<<<<<< HEAD
 
                       <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="../images/telegram.png" width="30" height="30" alt="" >
+=======
+<<<<<<< HEAD
+                      <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="../images/telegram.png" width="30" height="30" alt="" >
+=======
+<<<<<<< HEAD
+                      <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="../images/telegram.png" width="30" height="30" alt="" >
+=======
+                      <a href="#" target="_blank"><img class='footerimg rotate-img text-ex-tooltip' src="images/telegram.png" width="30" height="30" alt="" >
+>>>>>>> 102525ad014d2d7873da63a4d917a141147aa69b
+>>>>>>> 6f0045ab4dbd46190e6d607cb497819afc8a06bb
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
                       <div class="tooltip-content">
                         <p>telegram</p>
                       </div></a>

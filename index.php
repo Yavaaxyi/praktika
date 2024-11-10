@@ -26,7 +26,11 @@ require_once('db.php');
         <form class=" col-lg-auto mb-4 mb-lg-3" style="margin-top: auto; margin-right: auto;"  role="search">
           <input type="search" class="form-control" placeholder="Поиск по товарам" aria-label="Search">
         </form>
+<<<<<<< HEAD
         <a href="index.php" class=" d-flex align-items-center link-body-emphasis text-decoration-none" style="margin: auto;">
+=======
+        <a href="index.html" class=" d-flex align-items-center link-body-emphasis text-decoration-none" style="margin: auto;">
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
           <span class="fs-4"><img src="images/productcardsphoto/em.png" width="90"></span>
         </a>
         <ul class="nav" style="margin-left: auto;">
@@ -45,7 +49,11 @@ require_once('db.php');
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
       <form action="form/login.php" class="row g-3 needs-validation" novalidate method="post">
+=======
+      <form action="form/register1.php" class="row g-3 needs-validation" novalidate method="post">
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
           <div class="col-md-4">
             <label for="name" class="form-label">Имя пользователя</label>
             <input type="text" class="form-control" id="name" name="login" required>
@@ -139,13 +147,21 @@ require_once('db.php');
     <nav class="bg-body-tertiary border-bottom">
       <div class="container d-flex flex-wrap">
         <ul class="nav me-auto" style="margin: auto;">
+<<<<<<< HEAD
           <li class="nav-item"><a href="index.php" class="nav-link link-body-emphasis px-4 active" aria-current="page" ><p>ГЛАВНАЯ</p></a></li>
+=======
+          <li class="nav-item"><a href="index.html" class="nav-link link-body-emphasis px-4 active" aria-current="page" ><p>ГЛАВНАЯ</p></a></li>
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
           <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>НОВИНКИ</p></a></li>
           <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>МАКИЯЖ</p></a></li>
           <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>ЛИЦО</p></a></li>
           <li class="nav-item"><a href="tovari.html" class="nav-link link-body-emphasis px-4"><p>ПРОДУКЦИЯ</p></a></li>
           <li class="nav-item"><a href="About_company.html" class="nav-link link-body-emphasis px-4"><p>О НАС</p></a></li>
+<<<<<<< HEAD
           <li class="nav-item"><a href="delivery.html" class="nav-link link-body-emphasis px-4"><p>ДОСТАВКА И ОПЛАТА</p></a></li>
+=======
+          <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>ДОСТАВКА И ОПЛАТА</p></a></li>
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
           <li class="nav-item"><a href="contacts.html" class="nav-link link-body-emphasis px-4"><p>КОНТАКТЫ</p></a></li>
         </ul>
       </div>
@@ -197,7 +213,11 @@ require_once('db.php');
             <li><h2>Тональная основа с кистью</h2>
               <a href="mineralnayatonalnayaosnova.html"><img src="images/productcardsphoto/Тональная_основа_с_кистью.webp" width="300px" height="300px"></a>
             </li>
+<<<<<<< HEAD
             <li><h2>Тушь для ресниц укпрепление</h2>
+=======
+            <li><h2>Тушь для ресниц укпрепление и объем</h2>
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
               <a href="tushdlyaresnic.html"><img src="images/productcardsphoto/Тушь_для_ресниц_УКРЕПЛЕНИЕ_И_ОБЪЁМ.webp" width="300px" height="300px"></a>
             </li>
             <li><h2>Мининабор косметики</h2>
@@ -223,7 +243,11 @@ require_once('db.php');
               <a href="vosk.html"><img src="images/productcardsphoto/Воск_для_бровей.webp" width="300px" height="300px"></a>
             </li>
             <li><h2>Оттеночный бальзам для губ 2в1</h2>
+<<<<<<< HEAD
               <a href="ottenichniybalzam.html"><img src="images/productcardsphoto/Бальзам_Вишневый_аметист(1).webp" width="300px" height="300px"></a>
+=======
+              <a href="ottenichniybalzam.html"><img src="images/productcardsphoto/Бальзам_Вишневый_аметист.webp" width="300px" height="300px"></a>
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
             </li>
             
           </ul>

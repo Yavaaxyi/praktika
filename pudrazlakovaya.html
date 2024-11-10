@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/products.css">
+<<<<<<< HEAD
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+=======
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -20,7 +23,11 @@
         <form class=" col-lg-auto mb-4 mb-lg-3" style="margin-top: auto; margin-right: auto;"  role="search">
           <input type="search" class="form-control" placeholder="Поиск по товарам" aria-label="Search">
         </form>
+<<<<<<< HEAD
         <a href="index.html" class=" d-flex align-items-center link-body-emphasis text-decoration-none" style="margin: auto;">
+=======
+        <a href="index.php" class=" d-flex align-items-center link-body-emphasis text-decoration-none" style="margin: auto;">
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
           <span class="fs-4"><img src="images/productcardsphoto/em.png" width="90"></span>
         </a>
         <ul class="nav" style="margin-left: auto;">
@@ -34,7 +41,11 @@
     <nav class="bg-body-tertiary border-bottom">
       <div class="container d-flex flex-wrap">
         <ul class="nav me-auto" style="margin: auto;">
+<<<<<<< HEAD
           <li class="nav-item"><a href="index.html" class="nav-link link-body-emphasis px-4"><p>ГЛАВНАЯ</p></a></li>
+=======
+          <li class="nav-item"><a href="index.php" class="nav-link link-body-emphasis px-4"><p>ГЛАВНАЯ</p></a></li>
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
           <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>НОВИНКИ</p></a></li>
           <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>МАКИЯЖ</p></a></li>
           <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-4"><p>ЛИЦО</p></a></li>
@@ -50,7 +61,11 @@
       <img src="images/loading.gif" alt="" />
     </ul>
 
+<<<<<<< HEAD
     <div id="catalog-template" type="text/template">
+=======
+    <script id="catalog-template" type="text/template">
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
       
       <div class="wrapper">
         <div class="product-img">
@@ -71,6 +86,7 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <script type="text/template">
         <% if (goods && goods.length > 0) { %>
             <div class="product-list">
@@ -103,6 +119,35 @@
 
         
     </div>
+=======
+      <% _.each(goods, function(good) { %>
+      <div class="product-info">
+        <div class="product-text">          
+          <li class="good-item">
+          <!-- <div class="col-md-8"> -->
+              <div class="good-item__name"><h1><%= good.name %></h1></div>
+              <h3></h3>
+              <div class="good-item_text"><p><%- good.text %></p></div>
+              
+        <div class="product-price-btn">
+          <div class="good-item__price"><p><span><%= good.price %></span>₽</p>  </div>          
+          <button type='button' 
+          class="good-item__btn-add btn btn-info btn-sm js-add-to-cart"
+          data-id="<%= good.id %>"
+          data-name="<%- good.name %>"
+          data-price="<%= good.price %>"
+      >Добавить в корзину</button>
+        </div>
+
+          <!-- <button type="button">Купить</button> -->
+
+        </div>
+      <!-- </div> -->
+    </div>
+    <% }); %>
+  </script>
+    
+>>>>>>> ed844ca37da4f8b3f814c2ca7df99bf0c835f0ef
     <!-- <ul class="nav nav-pills">
         <li class="active"><a href="/">Каталог</a></li>
         <li><a href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a></li>
