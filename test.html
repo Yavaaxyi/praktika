@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты</title>
+    <style>
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="products-container"></div>
+
+<script>
+    const products = [
+        {
+            "id": "1",
+            "name": "Пудра злаковая для умывания",
+            "price": "690",
+            "img": "images/productcardsphoto/Пудра_злаковая.webp",
+            "text": "Злаковая пудра для умывания имеет всего семь простых и натуральных компонентов в составе."
+        },
+        {
+            "id": "2",
+            "name": "Крем для лица увлажняющий",
+            "price": "890",
+            "img": "images/productcardsphoto/Крем_Лаванда.webp",
+            "text": "Нежный и успокаивающий, глубоко увлажняющий лавандовый крем перенесёт вас в настоящее цветущее лавандовое поле и превратит уход в ритуал."
+        }
+    ];
+
+    const container = document.getElementById('products-container');
+
+    // Выводим только первый продукт
+    const product = products[1];  // Можно также изменить индекс, чтобы показывать другой продукт
+
+    const productCard = document.createElement('div');
+    productCard.className = 'product-card';
+
+    // Используем шаблонные строки для вставки данных
+    productCard.innerHTML = `
+        <img src="${product.img}" alt="${product.name}">
+        <h2>${product.name}</h2>
+        <p>Цена: ${product.price} руб.</p>
+        <p>${product.text}</p>
+    `;
+
+    container.appendChild(productCard);
+</script>
+
+</body>
+</html>
+
