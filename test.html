@@ -5,16 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Продукты</title>
     <style>
-        .product-card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 16px;
-            text-align: center;
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
+        
+        #products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
         .product-card img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-card h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 16px 0;
+        }
+
+        .product-card p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.5;
+            margin: 0 16px 16px;
+        }
+
+        .product-card .price {
+            font-size: 1.2em;
+            color: #E94E77;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product-card .buy-button {
+            background-color: #E94E77;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card .buy-button:hover {
+            background-color: #D83D64;
+        }
+
+        /* Корзина */
+        #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        #cart h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        #cart ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #cart li {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        #cart .total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .product-card {
+                width: 100%;
+                max-width: 350px;
+            }
         }
     </style>
 </head>
@@ -22,43 +129,84 @@
 
 <div id="products-container"></div>
 
+<!-- Корзина -->
+<div id="cart">
+    <h3>Корзина</h3>
+    <ul id="cart-items">
+        <!-- Сюда будут добавляться товары -->
+    </ul>
+    <p class="total">Итого: <span id="total-price">0</span> руб.</p>
+</div>
+
 <script>
     const products = [
         {
             "id": "1",
             "name": "Пудра злаковая для умывания",
-            "price": "690",
+            "price": 690,
             "img": "images/productcardsphoto/Пудра_злаковая.webp",
             "text": "Злаковая пудра для умывания имеет всего семь простых и натуральных компонентов в составе."
         },
         {
             "id": "2",
             "name": "Крем для лица увлажняющий",
-            "price": "890",
+            "price": 890,
             "img": "images/productcardsphoto/Крем_Лаванда.webp",
             "text": "Нежный и успокаивающий, глубоко увлажняющий лавандовый крем перенесёт вас в настоящее цветущее лавандовое поле и превратит уход в ритуал."
         }
     ];
 
     const container = document.getElementById('products-container');
+    const cartItemsList = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
 
-    // Выводим только первый продукт
-    const product = products[1];  // Можно также изменить индекс, чтобы показывать другой продукт
+    // Массив для корзины
+    let cart = [];
 
-    const productCard = document.createElement('div');
-    productCard.className = 'product-card';
+    // Функция для обновления отображения корзины
+    function updateCart() {
+        // Очищаем список товаров в корзине
+        cartItemsList.innerHTML = '';
+        let totalPrice = 0;
 
-    // Используем шаблонные строки для вставки данных
-    productCard.innerHTML = `
-        <img src="${product.img}" alt="${product.name}">
-        <h2>${product.name}</h2>
-        <p>Цена: ${product.price} руб.</p>
-        <p>${product.text}</p>
-    `;
+        // Проходим по корзине и отображаем товары
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - ${item.price} руб.`;
+            cartItemsList.appendChild(li);
+            totalPrice += item.price;
+        });
 
-    container.appendChild(productCard);
+        // Обновляем общую сумму
+        totalPriceElement.textContent = totalPrice;
+    }
+
+    // Функция для добавления товара в корзину
+    function addToCart(product) {
+        cart.push(product);
+        updateCart();
+    }
+
+    // Выводим продукты на страницу
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+
+        productCard.innerHTML = `
+            <img src="${product.img}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>${product.text}</p>
+            <p class="price">${product.price} руб.</p>
+            <button class="buy-button">Добавить в корзину</button>
+        `;
+
+        // Обработчик клика на кнопку "Добавить в корзину"
+        const buyButton = productCard.querySelector('.buy-button');
+        buyButton.addEventListener('click', () => addToCart(product));
+
+        container.appendChild(productCard);
+    });
 </script>
 
 </body>
 </html>
-
